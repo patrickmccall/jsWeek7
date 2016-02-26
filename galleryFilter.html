@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -8,7 +8,22 @@
 <link href="css/large.css" type="text/css" rel="stylesheet" /> 
 </head>
 <body class="page"> 
-<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"> </script>
+  <script>
+    $("document").ready(function () {
+      //$("img").not(".robots").addClass("error");
+      //$("nav").children().addClass("error")
+      var firstImage = $("#drawing img:lt(1)");
+
+      firstImage.next().addClass("error");
+      //****************/TWEENMAX?*****************
+      TweenMax.to("#drawing", 5, { rotation: 360 });
+      TweenMax.to("#water-color", 5, { rotation: -360 });
+      TweenMax.to("#oil", 5, { rotation: 360 });
+    })
+
+
+  </script>
+
 <header>
 	<h1>Artwork Techniques</h1> 
 	</header>
@@ -118,6 +133,6 @@
 		&copy; Copyright  by jason zeringue
 	</p>
 </footer>
-<script type="text/javascript" src="javascript/image-filter.js"></script>
+<!--<script type="text/javascript" src="javascript/image-filter.js"></script>-->
 </body>
 </html>
